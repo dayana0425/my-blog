@@ -9,12 +9,13 @@
 
 <!-- Display Articles -->
 <div class="container">
-        <% articles.forEach(article=> 
-            { %>
-            <div class="card mt-4">
-                <h1 class="card-header"> <%= article.title %> </h1>
-                <p class="card-body"> <%= article.description %> </p>
-            </div> 
-            <% }) 
-        %>
+    <% articles.forEach(article => { %>
+        <div class="card mt-4">
+            <h1 class="card-header"><%= article.title %></h1>
+            <div class="card-body">
+                <div class="card-subtitle mb-2 text-muted"><%= article.createdAt.toLocaleDateString() %></div>
+                <div class="card-text mb-2"><%= article.description %></div>
+            </div>
+        </div>
+    <% }); %>
 </div>
