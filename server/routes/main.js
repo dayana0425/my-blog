@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
     { title: 'Article 2', createdAt: new Date(), description: 'Description of article 2' },
     { title: 'Article 3', createdAt: new Date(), description: 'Description of article 3' },
   ];
-  res.render("index", { articles: articles });
+  res.render("articles/index", { articles: articles });
 });
 
 module.exports = router;
